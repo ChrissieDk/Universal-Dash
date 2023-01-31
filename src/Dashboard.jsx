@@ -1,190 +1,125 @@
 import React from 'react'
+import { Fragment } from 'react';
+import { useState } from 'react';
+import { data } from './users'
+import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 
-const dashboard = () => {
+const Dashboard = () => {
+
+  const [users, setUsers] = useState(data.slice(0, 12));
+  const [sorted, setSorted] = useState({sorted: "id", reversed:"false"})
+
+  const sortById = () => {
+
+    setSorted({sorted: "id", reversed: !sorted.reversed});
+    const usersCopy = [...users];
+
+    usersCopy.sort((userA, userB) => {
+      if(sorted.reversed){
+        return userA.id - userB.id;
+      };
+      return userB.id - userA.id;
+    });
+    setUsers(usersCopy);
+  };
+
+  const sortByName = () => {
+    setSorted({sorted: "name", reversed: !sorted.reversed});
+    const usersCopy = [...users];
+    usersCopy.sort((userA, userB) => {
+      const fullNameA = `${userA.first_name} ${userB.last_name}`;
+      const fullNameB = `${userB.first_name} ${userA.last_name}`;
+
+      if(sorted.reversed) {
+        return fullNameB.localeCompare(fullNameA);
+      };
+
+      return fullNameA.localeCompare(fullNameB);
+    });
+    setUsers(usersCopy);
+  };
+
+  
+  const renderUsers = () => {
     return (
-      <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
-        <h1 className='text-xl mb-10 '>Dashboard</h1>
-      <div class="flex flex-column justify-center text-center gap-4 pb-10">
-        <div class="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
+      <Fragment>
+        {users.map((user) => {
+          return (
+            <tr className='bg-white' key={user.id}>
+              <td className='font-bold text-blue-500 hover:underline pl-7 cursor-pointer'>{user.id}</td>
+              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{`${user.first_name} ${user.last_name}`}</td>
+              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.email}</td>
+              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.gender}</td>
+            </tr>
+          );
+        })};
+      </Fragment>
+    );
+  };
+
+  const renderArrow = () => {
+    if(sorted.reversed) {
+      return <FaArrowUp className='inline-block pl-2 rounded text-lg'/>;
+    }
+    return <FaArrowDown className='inline-block pl-2 rounded text-lg'/>;
+  };
+
+
+  return (
+    <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
+      <h1 className='text-xl mb-10 '>Dashboard</h1>
+      <div className="flex flex-column justify-center text-center gap-4 pb-10">
+        <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
           <h1>Total Sales</h1>
           <span className='text-lime-600'>3421</span>
         </div>
-        <div class="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
+        <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
           <h1>Active users</h1>
           <span className='text-lime-600'>3421</span>
         </div>
-        <div class="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
+        <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
           <h1>Example</h1>
           <span className='text-lime-600'>3421</span>
         </div>
       </div>
-       <div className='w-full border border-slate-100 rounded-lg'>
-      <div className='overflow-auto rounded-lg shadow'>
-        <table className='w-full pt-10'>
-        <thead className='bg-slate-50 border-b-2 border-slate-200'>  
-        <tr>
-          <th className='p-3 text-sm font-semibold tracking-wide text-left'>Name</th>
-          <th className='p-3 text-sm font-semibold tracking-wide text-left'>Sim Number</th>
-          <th className='p-3 text-sm font-semibold tracking-wide text-left'>Status</th>
-          <th className='p-3 text-sm font-semibold tracking-wide text-left'>Date</th>
-          <th className='p-3 text-sm font-semibold tracking-wide text-left'>Package</th>
-        </tr>
-        </thead>
-        
-        
-        <tbody className='divide-y divide-gray-200'>
-          <tr className='bg-white'>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <a href="/" className='font-bold text-blue-500 hover:underline'>10001</a>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Rebeckah Seth
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40'>On Hold</span>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>16/10/2021</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>10/10</td>
-          </tr>
+      <div className='w-full border border-slate-100 rounded-lg'>
+        <div className='overflow-auto rounded-lg shadow'>
+          <table className='w-full pt-10'>
+            <thead className='bg-slate-50 border-b-2 border-slate-200'>
+              <tr>
+                <th onClick={sortById} className='p-3 text-sm font-semibold tracking-wide text-left'>ID
+                {sorted.sorted === "id" ? renderArrow() : null}
+                </th>
+                <th onClick={sortByName} className='p-3 text-sm font-semibold tracking-wide text-left'>Name
+                {sorted.sorted === "name" ? renderArrow() : null}
 
-          <tr className='bg-slate-100'>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <a href="/" className='font-bold text-blue-500 hover:underline'>10002</a>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Carlyle Luke
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40'>Cancelled</span>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>12/01/2021</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>20/20</td>
-          </tr>
+                </th>
+                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Status</th>
+                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Date</th>
+                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Package</th>
+              </tr>
+            </thead>
 
-          <tr className='bg-white'>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <a href="/" className='font-bold text-blue-500 hover:underline'>10003</a>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Hamilton Earnestine
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>13/01/2022</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>20/20</td>
-          </tr>
-
-          <tr className='bg-slate-100'>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <a href="/" className='font-bold text-blue-500 hover:underline'>10004</a>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Christiaan de Kock
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>22/01/2022</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>10/10</td>
-          </tr>
-
-          <tr>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <a href="/" className='font-bold text-blue-500 hover:underline'>10005</a>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Stewart Jeni
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>18/09/2021</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>20/20</td>
-          </tr>
-          <tr className='bg-white'>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <a href="/" className='font-bold text-blue-500 hover:underline'>10006</a>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Hayleigh Robyn
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40'>On Hold</span>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>16/10/2021</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>10/10</td>
-          </tr>
-
-          <tr className='bg-slate-100'>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <a href="/" className='font-bold text-blue-500 hover:underline'>10007</a>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Lea Anděla
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40'>Cancelled</span>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>12/01/2021</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>20/20</td>
-          </tr>
-
-          <tr className='bg-white'>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <a href="/" className='font-bold text-blue-500 hover:underline'>10008</a>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Eilert Aino
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>13/01/2022</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>20/20</td>
-          </tr>
-
-          <tr className='bg-slate-100'>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <a href="/" className='font-bold text-blue-500 hover:underline'>10009</a>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-            Marvel Kayin
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>22/01/2022</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>10/10</td>
-          </tr>
-
-          <tr>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <a href="/" className='font-bold text-blue-500 hover:underline'>10010</a>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Maalik Kristia
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
-            </td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>18/09/2021</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>20/20</td>
-          </tr>
+            <tbody className='divide-y divide-gray-200' >
+              {renderUsers()};
+            </tbody>
 
 
-        </tbody>
-        </table>
+
+          </table>
         </div>
       </div>
+      <div>
+        <button className=' justify-center text-center items-center w-full rounded-lg border border-slate-100'>press me</button>
       </div>
-    )
-};
-  
-  
-  
-  
-  
-  
-  
-export default dashboard;
+    </div>
+  )
+}
+
+
+
+
+
+
+
+export default Dashboard;
