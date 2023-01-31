@@ -38,7 +38,7 @@ const dashboard = () => {
               <a href="/" className='font-bold text-blue-500 hover:underline'>10001</a>
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Christiaan de Kock
+              Rebeckah Seth
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
               <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40'>On Hold</span>
@@ -52,7 +52,7 @@ const dashboard = () => {
               <a href="/" className='font-bold text-blue-500 hover:underline'>10002</a>
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Christiaan de Kock
+              Carlyle Luke
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
               <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40'>Cancelled</span>
@@ -66,7 +66,7 @@ const dashboard = () => {
               <a href="/" className='font-bold text-blue-500 hover:underline'>10003</a>
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Christiaan de Kock
+              Hamilton Earnestine
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
               <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
@@ -94,7 +94,7 @@ const dashboard = () => {
               <a href="/" className='font-bold text-blue-500 hover:underline'>10005</a>
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Christiaan de Kock
+              Stewart Jeni
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
               <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
@@ -107,7 +107,7 @@ const dashboard = () => {
               <a href="/" className='font-bold text-blue-500 hover:underline'>10006</a>
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Christiaan de Kock
+              Hayleigh Robyn
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
               <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40'>On Hold</span>
@@ -121,7 +121,7 @@ const dashboard = () => {
               <a href="/" className='font-bold text-blue-500 hover:underline'>10007</a>
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Christiaan de Kock
+              Lea Anděla
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
               <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40'>Cancelled</span>
@@ -135,7 +135,7 @@ const dashboard = () => {
               <a href="/" className='font-bold text-blue-500 hover:underline'>10008</a>
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Christiaan de Kock
+              Eilert Aino
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
               <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
@@ -149,7 +149,7 @@ const dashboard = () => {
               <a href="/" className='font-bold text-blue-500 hover:underline'>10009</a>
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Christiaan de Kock
+            Marvel Kayin
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
               <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
@@ -163,7 +163,7 @@ const dashboard = () => {
               <a href="/" className='font-bold text-blue-500 hover:underline'>10010</a>
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              Christiaan de Kock
+              Maalik Kristia
             </td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
               <span className='p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40'>Active</span>
