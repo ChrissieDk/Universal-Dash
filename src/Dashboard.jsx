@@ -7,7 +7,8 @@ import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 const Dashboard = () => {
 
   const [users, setUsers] = useState(data.slice(0, 12));
-  const [sorted, setSorted] = useState({sorted: "id", reversed:"false"})
+  const [sorted, setSorted] = useState({sorted: "id", reversed:"false"});
+  const [searchPhrase, setSearchPhrase] = useState("");
 
   const sortById = () => {
 
@@ -39,6 +40,23 @@ const Dashboard = () => {
     setUsers(usersCopy);
   };
 
+  const search = (event) => {
+    if(event.target.value === ""){
+      setUsers(data.slice(0, 12));
+      setSearchPhrase("")
+      return;
+    } else {
+    const matchedUsers = data.filter((user) => {
+     return `${user.first_name} ${user.last_name}`
+     .toLowerCase()
+     .includes(event.target.value.toLowerCase())
+    });
+
+    setUsers(matchedUsers);
+  }
+    setSearchPhrase(event.target.value)
+  };
+
   
   const renderUsers = () => {
     return (
@@ -67,8 +85,8 @@ const Dashboard = () => {
 
   return (
     <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
-      <h1 className='text-xl mb-10 '>Dashboard</h1>
-      <div className="flex flex-column justify-center text-center gap-4 pb-10">
+      <h1 className='text-xl mb-5 '>Dashboard</h1>
+      <div className="flex flex-column justify-center text-center gap-4 pb-5">
         <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
           <h1>Total Sales</h1>
           <span className='text-lime-600'>3421</span>
@@ -81,6 +99,14 @@ const Dashboard = () => {
           <h1>Example</h1>
           <span className='text-lime-600'>3421</span>
         </div>
+      </div>
+      <div>
+        <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full' 
+          type='text' 
+          placeholder='Search' 
+          value={searchPhrase}
+          onChange={search}
+          />
       </div>
       <div className='w-full border border-slate-100 rounded-lg'>
         <div className='overflow-auto rounded-lg shadow'>
