@@ -57,6 +57,19 @@ const Dashboard = () => {
     setSearchPhrase(event.target.value)
   };
 
+  const Status = ({ status }) => {
+    let className;
+    if (status === 'Active') {
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-1/4 text-center';
+    } else if (status === 'On Hold') {
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-1/4 text-center';
+    } else if (status === 'Cancelled') {
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-1/4 text-center';
+    }
+  
+    return <div className={className}>{status}</div>;
+  };
+
   
   const renderUsers = () => {
     return (
@@ -66,8 +79,9 @@ const Dashboard = () => {
             <tr className='bg-white' key={user.id}>
               <td className='font-bold text-blue-500 hover:underline pl-7 cursor-pointer'>{user.id}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{`${user.first_name} ${user.last_name}`}</td>
-              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.email}</td>
+              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'><Status status={user.status} /></td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.gender}</td>
+              
             </tr>
           );
         })};
@@ -77,9 +91,9 @@ const Dashboard = () => {
 
   const renderArrow = () => {
     if(sorted.reversed) {
-      return <FaArrowUp className='inline-block pl-2 rounded text-lg'/>;
+      return <FaArrowUp className='inline-block pl-2 rounded text-lg cursor-pointer'/>;
     }
-    return <FaArrowDown className='inline-block pl-2 rounded text-lg'/>;
+    return <FaArrowDown className='inline-block pl-2 rounded text-lg cursor-pointer'/>;
   };
 
 
@@ -129,9 +143,7 @@ const Dashboard = () => {
             <tbody className='divide-y divide-gray-200' >
               {renderUsers()};
             </tbody>
-
-
-
+            
           </table>
         </div>
       </div>
