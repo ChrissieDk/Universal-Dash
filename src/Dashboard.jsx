@@ -3,20 +3,21 @@ import { Fragment } from 'react';
 import { useState } from 'react';
 import { data } from './users'
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
+// import Pagination from './components/Pagination';
 
 const Dashboard = () => {
 
-  const [users, setUsers] = useState(data.slice(0, 12));
-  const [sorted, setSorted] = useState({sorted: "id", reversed:"false"});
+  const [users, setUsers] = useState(data.slice(0, 10));
+  const [sorted, setSorted] = useState({ sorted: "id", reversed: "false" });
   const [searchPhrase, setSearchPhrase] = useState("");
 
   const sortById = () => {
 
-    setSorted({sorted: "id", reversed: !sorted.reversed});
+    setSorted({ sorted: "id", reversed: !sorted.reversed });
     const usersCopy = [...users];
 
     usersCopy.sort((userA, userB) => {
-      if(sorted.reversed){
+      if (sorted.reversed) {
         return userA.id - userB.id;
       };
       return userB.id - userA.id;
@@ -25,13 +26,13 @@ const Dashboard = () => {
   };
 
   const sortByName = () => {
-    setSorted({sorted: "name", reversed: !sorted.reversed});
+    setSorted({ sorted: "name", reversed: !sorted.reversed });
     const usersCopy = [...users];
     usersCopy.sort((userA, userB) => {
       const fullNameA = `${userA.first_name} ${userB.last_name}`;
       const fullNameB = `${userB.first_name} ${userA.last_name}`;
 
-      if(sorted.reversed) {
+      if (sorted.reversed) {
         return fullNameB.localeCompare(fullNameA);
       };
 
@@ -41,47 +42,50 @@ const Dashboard = () => {
   };
 
   const search = (event) => {
-    if(event.target.value === ""){
-      setUsers(data.slice(0, 12));
+    if (event.target.value === "") {
+      setUsers(data.slice(0, 10));
       setSearchPhrase("")
       return;
     } else {
-    const matchedUsers = data.filter((user) => {
-     return `${user.first_name} ${user.last_name}`
-     .toLowerCase()
-     .includes(event.target.value.toLowerCase())
-    });
+      const matchedUsers = data.filter((user) => {
+        return `${user.first_name} ${user.last_name}`
+          .toLowerCase()
+          .includes(event.target.value.toLowerCase())
+      });
 
-    setUsers(matchedUsers);
-  }
+      setUsers(matchedUsers);
+    }
     setSearchPhrase(event.target.value)
   };
 
   const Status = ({ status }) => {
     let className;
     if (status === 'Active') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-1/4 text-center';
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center';
     } else if (status === 'On Hold') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-1/4 text-center';
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center';
     } else if (status === 'Cancelled') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-1/4 text-center';
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center';
     }
-  
+
     return <div className={className}>{status}</div>;
   };
 
-  
+
   const renderUsers = () => {
     return (
       <Fragment>
         {users.map((user) => {
           return (
-            <tr className='bg-white' key={user.id}>
+            <tr>
               <td className='font-bold text-blue-500 hover:underline pl-7 cursor-pointer'>{user.id}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{`${user.first_name} ${user.last_name}`}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'><Status status={user.status} /></td>
-              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.gender}</td>
-              
+              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.date}</td>
+              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.package}</td>
+              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.package_term}</td>
+              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.cell_number}</td>
+              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.sim_number}</td>
             </tr>
           );
         })};
@@ -90,10 +94,10 @@ const Dashboard = () => {
   };
 
   const renderArrow = () => {
-    if(sorted.reversed) {
-      return <FaArrowUp className='inline-block pl-2 rounded text-lg cursor-pointer'/>;
-    }
-    return <FaArrowDown className='inline-block pl-2 rounded text-lg cursor-pointer'/>;
+    if (sorted.reversed) {
+      return <FaArrowUp className='inline-block pl-2 rounded text-lg cursor-pointer' />;
+    };
+    return <FaArrowDown className='inline-block pl-2 rounded text-lg cursor-pointer' />;
   };
 
 
@@ -115,12 +119,12 @@ const Dashboard = () => {
         </div>
       </div>
       <div>
-        <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full' 
-          type='text' 
-          placeholder='Search' 
+        <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full'
+          type='text'
+          placeholder='Search'
           value={searchPhrase}
           onChange={search}
-          />
+        />
       </div>
       <div className='w-full border border-slate-100 rounded-lg'>
         <div className='overflow-auto rounded-lg shadow'>
@@ -128,36 +132,32 @@ const Dashboard = () => {
             <thead className='bg-slate-50 border-b-2 border-slate-200'>
               <tr>
                 <th onClick={sortById} className='p-3 text-sm font-semibold tracking-wide text-left'>ID
-                {sorted.sorted === "id" ? renderArrow() : null}
+                  {sorted.sorted === "id" ? renderArrow() : null}
                 </th>
                 <th onClick={sortByName} className='p-3 text-sm font-semibold tracking-wide text-left'>Name
-                {sorted.sorted === "name" ? renderArrow() : null}
-
+                  {sorted.sorted === "name" ? renderArrow() : null}
                 </th>
                 <th className='p-3 text-sm font-semibold tracking-wide text-left'>Status</th>
                 <th className='p-3 text-sm font-semibold tracking-wide text-left'>Date</th>
                 <th className='p-3 text-sm font-semibold tracking-wide text-left'>Package</th>
+                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Package term</th>
+                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Cell number</th>
+                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Sim number</th>
               </tr>
             </thead>
 
-            <tbody className='divide-y divide-gray-200' >
+            <tbody className='divide-y divide-gray-200'>
               {renderUsers()};
             </tbody>
-            
+
           </table>
         </div>
       </div>
       <div>
-        <button className=' justify-center text-center items-center w-full rounded-lg border border-slate-100'>press me</button>
+        {/* <Pagination data={users}/> */}
       </div>
     </div>
   )
 }
-
-
-
-
-
-
 
 export default Dashboard;
