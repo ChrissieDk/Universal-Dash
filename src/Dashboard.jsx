@@ -11,6 +11,8 @@ const Dashboard = () => {
   const [sorted, setSorted] = useState({ sorted: "id", reversed: "false" });
   const [searchPhrase, setSearchPhrase] = useState("");
 
+  // toggle sort through id in ascending or descending order
+
   const sortById = () => {
 
     setSorted({ sorted: "id", reversed: !sorted.reversed });
@@ -24,6 +26,8 @@ const Dashboard = () => {
     });
     setUsers(usersCopy);
   };
+
+  // Sorts the users array by full name (first and last name) in ascending or descending order, depending on the state of sorted.reversed.
 
   const sortByName = () => {
     setSorted({ sorted: "name", reversed: !sorted.reversed });
@@ -40,6 +44,8 @@ const Dashboard = () => {
     });
     setUsers(usersCopy);
   };
+
+  // Filters the users array based on a search phrase entered by the user, either matching full name (first and last name) or returning all users if the search phrase is an empty string.
 
   const search = (event) => {
     if (event.target.value === "") {
@@ -58,6 +64,8 @@ const Dashboard = () => {
     setSearchPhrase(event.target.value)
   };
 
+  // Returns a div with a status-dependent CSS class name.
+
   const Status = ({ status }) => {
     let className;
     if (status === 'Active') {
@@ -71,6 +79,7 @@ const Dashboard = () => {
     return <div className={className}>{status}</div>;
   };
 
+  // Maps through the users array and returns a table row for each user, displaying information such as their name, status, date, etc.
 
   const renderUsers = () => {
     return (
@@ -92,6 +101,8 @@ const Dashboard = () => {
       </Fragment>
     );
   };
+
+  // Returns either an upward or downward arrow, depending on the state of sorted.reversed.
 
   const renderArrow = () => {
     if (sorted.reversed) {
