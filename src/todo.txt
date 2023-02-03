@@ -1,0 +1,14 @@
+ui - done
+sidebar - done
+filter - done
+search - done (final styling)
+dynamic status - done
+dashboard fields - done 
+3 boxes ( ? ) -
+pagination - 
+routing - 
+login page - 
+logout - 
+billing (form ?) - 
+simswop (dashboard ?) -
+termination request (dashboard ?) - 
