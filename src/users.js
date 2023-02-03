@@ -1100,4 +1100,4 @@ export const data = [
 		cell_number: "1234567890",
 		sim_number: "0657890"
 	},
-]
+];
