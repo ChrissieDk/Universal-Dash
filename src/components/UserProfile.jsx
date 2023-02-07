@@ -24,4 +24,4 @@ const UserProfile = ({toggle}) => {
   );
 };
 
-export default UserProfile
+export default UserProfile;

@@ -22,4 +22,4 @@ const SidebarIcons = ({toggle}) => {
   )
 }
 
-export default SidebarIcons
+export default SidebarIcons;

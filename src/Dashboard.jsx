@@ -3,7 +3,8 @@ import { Fragment } from 'react';
 import { useState } from 'react';
 import { data } from './users'
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
-// import Pagination from './components/Pagination';
+import Pagination from './components/Pagination';
+
 
 const Dashboard = () => {
 
@@ -69,12 +70,12 @@ const Dashboard = () => {
   const Status = ({ status }) => {
     let className;
     if (status === 'Active') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center';
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-3/5';
     } else if (status === 'On Hold') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center';
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-3/5';
     } else if (status === 'Cancelled') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center';
-    }
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-3/5';
+    };
 
     return <div className={className}>{status}</div>;
   };
@@ -86,7 +87,7 @@ const Dashboard = () => {
       <Fragment>
         {users.map((user) => {
           return (
-            <tr>
+            <tr key={user.id}>
               <td className='font-bold text-blue-500 hover:underline pl-7 cursor-pointer'>{user.id}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{`${user.first_name} ${user.last_name}`}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'><Status status={user.status} /></td>
@@ -96,8 +97,8 @@ const Dashboard = () => {
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.cell_number}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.sim_number}</td>
             </tr>
-          );
-        })};
+          )
+        })}
       </Fragment>
     );
   };
@@ -116,7 +117,7 @@ const Dashboard = () => {
     <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
       <h1 className='text-xl mb-5 '>Dashboard</h1>
       <div className="flex flex-column justify-center text-center gap-4 pb-5">
-        <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
+        {/* <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
           <h1>Total Sales</h1>
           <span className='text-lime-600'>3421</span>
         </div>
@@ -127,7 +128,7 @@ const Dashboard = () => {
         <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
           <h1>Example</h1>
           <span className='text-lime-600'>3421</span>
-        </div>
+        </div> */}
       </div>
       <div>
         <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full'
@@ -158,14 +159,16 @@ const Dashboard = () => {
             </thead>
 
             <tbody className='divide-y divide-gray-200'>
-              {renderUsers()};
+              {renderUsers()}
             </tbody>
 
           </table>
         </div>
       </div>
-      <div>
-        {/* <Pagination data={users}/> */}
+      <div >
+        <Pagination
+          users={data}
+        />
       </div>
     </div>
   )

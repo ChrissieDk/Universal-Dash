@@ -5,7 +5,7 @@ import SidebarIcons from './components/SidebarIcons';
 import UserProfile from './components/UserProfile';
 
 const Sidebar = () => {
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(false)
   return (
     <div className={`${toggle ? "w-[5.8rem]" : ""} sidebar-container z-10 bg-slate-50 border border-slate-200`}>
       {/* import userprofile and sidebaricons with toggle applied */}

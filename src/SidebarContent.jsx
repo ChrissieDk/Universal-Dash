@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { RxDashboard } from "react-icons/rx";
 import { CiMoneyBill } from "react-icons/ci";
 import { RiIndeterminateCircleLine } from "react-icons/ri";
@@ -9,23 +11,23 @@ import { BsSim } from "react-icons/bs";
 export const datas = [
   {
     id: 1,
-    icon: <RxDashboard />,
-    text: "Dashboard",
+    icon: <Link to='/'><RxDashboard /></Link>,
+    text: <Link to='/'>Dashboard</Link>,
   },
   {
     id: 2,
-    icon: <CiMoneyBill />,
-    text: "Billing",
+    icon: <Link to='/Billing'><CiMoneyBill /></Link>,
+    text: <Link to='/Billing'>Billing</Link>,
   },
   {
     id: 3,
-    icon: <RiIndeterminateCircleLine />,
-    text: "Termination request",
+    icon: <Link to='/terminationRequest'><RiIndeterminateCircleLine /></Link>,
+    text: <Link to='/terminationRequest'>Termination Request</Link>,
   },
   {
     id: 4,
-    icon: <BsSim />,
-    text: "SimSwop",
+    icon: <Link to='/simSwop'><BsSim /></Link>,
+    text: <Link to='/simSwop'>Sim Swop</Link>,
   },
   {
     id: 8,
