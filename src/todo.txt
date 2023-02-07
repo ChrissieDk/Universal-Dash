@@ -9,7 +9,7 @@ pagination -
 routing - 
 login page - 
 logout - 
-billing (form ?) - 
-simswop (dashboard ?) -
-termination request (dashboard ?) - 
+billing ( dashboard ) - 
+simswop (dashboard ) -
+termination request (dashboard ) - 
 api integration -
