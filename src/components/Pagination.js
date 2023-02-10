@@ -23,8 +23,6 @@ export default function Pagination(props) {
   }, [itemOffset, itemsPerPage, users]);
 
   const handlePageClick = ({ selected }) => {
-    console.log("Clicked")
-    console.log(selected)
     const newOffset = selected * itemsPerPage;
     if (newOffset < users.length) {
       setItemOffset(newOffset);

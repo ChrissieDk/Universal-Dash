@@ -75,7 +75,7 @@ const Dashboard = () => {
       className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-3/5';
     } else if (status === 'Cancelled') {
       className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-3/5';
-    };
+    } 
 
     return <div className={className}>{status}</div>;
   };

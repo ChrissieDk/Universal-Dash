@@ -4,9 +4,9 @@ filter - done
 search - done (final styling)
 dynamic status - done
 dashboard fields - done 
-3 boxes ( ? ) -
-pagination - 
-routing - 
+3 boxes ( ? ) - leave
+pagination - busy
+routing - done
 login page - 
 logout - 
 billing ( dashboard ) - 
