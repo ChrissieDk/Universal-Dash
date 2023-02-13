@@ -17,8 +17,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
-		termination_status: "Complete"
-		
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "N/A"
 	},
 	{
 		id: 2,
@@ -38,7 +40,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Cancelled",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Processing",
+		simswop_status: "Completed",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 3,
@@ -58,7 +63,11 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "On Hold",
 		billing_date: "04/04/2023",
-		termination_status: "Cancelled"
+		termination_status: "Cancelled",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "N/A"
+
 		
 	},
 	{
@@ -79,7 +88,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Complete"
+		termination_status: "Complete",
+		simswop_status: "Rejected",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 5,
@@ -99,7 +111,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Processing",
+		simswop_status: "Completed",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 6,
@@ -119,7 +134,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
-		termination_status: "Cancelled"
+		termination_status: "Complete",
+		simswop_status: "Completed",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 7,
@@ -139,7 +157,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Cancelled",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Cancelled",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "N/A"
 	},
 	{
 		id: 8,
@@ -159,7 +180,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "On Hold",
 		billing_date: "04/04/2023",
-		termination_status: "Complete"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "N/A"
 	},
 	{
 		id: 9,
@@ -179,7 +203,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "N/A"
 	},
 	{
 		id: 10,
@@ -199,7 +226,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Processing",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "N/A"
 	},
 	{
 		id: 11,
@@ -219,7 +249,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 12,
@@ -239,7 +272,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 13,
@@ -259,7 +295,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 14,
@@ -279,7 +318,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 15,
@@ -299,7 +341,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 16,
@@ -319,7 +364,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 17,
@@ -339,7 +387,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 18,
@@ -359,7 +410,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 19,
@@ -379,7 +433,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 20,
@@ -399,7 +456,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 21,
@@ -419,7 +479,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 22,
@@ -439,7 +502,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 23,
@@ -459,7 +525,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 24,
@@ -479,7 +548,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 25,
@@ -499,7 +571,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 26,
@@ -519,7 +594,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 27,
@@ -539,7 +617,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 28,
@@ -559,7 +640,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 29,
@@ -579,7 +663,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 30,
@@ -599,7 +686,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 31,
@@ -619,7 +709,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 32,
@@ -639,7 +732,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 33,
@@ -659,7 +755,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 34,
@@ -679,7 +778,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 35,
@@ -699,7 +801,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 36,
@@ -719,7 +824,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 37,
@@ -739,7 +847,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 38,
@@ -759,7 +870,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 39,
@@ -779,7 +893,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 40,
@@ -799,7 +916,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 41,
@@ -819,7 +939,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 42,
@@ -839,7 +962,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 43,
@@ -859,7 +985,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 44,
@@ -879,7 +1008,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 45,
@@ -899,7 +1031,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 46,
@@ -919,7 +1054,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 47,
@@ -939,7 +1077,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 48,
@@ -959,7 +1100,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 49,
@@ -979,7 +1123,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 50,
@@ -999,7 +1146,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 51,
@@ -1019,7 +1169,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 52,
@@ -1039,7 +1192,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 53,
@@ -1059,7 +1215,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 54,
@@ -1079,7 +1238,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 55,
@@ -1099,7 +1261,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 56,
@@ -1119,7 +1284,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 57,
@@ -1139,7 +1307,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 58,
@@ -1159,7 +1330,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 59,
@@ -1179,7 +1353,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 60,
@@ -1199,7 +1376,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 61,
@@ -1219,7 +1399,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 62,
@@ -1239,7 +1422,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 63,
@@ -1259,7 +1445,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 64,
@@ -1279,7 +1468,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 65,
@@ -1299,7 +1491,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 66,
@@ -1319,7 +1514,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 67,
@@ -1339,7 +1537,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 68,
@@ -1359,7 +1560,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 69,
@@ -1379,7 +1583,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 70,
@@ -1399,7 +1606,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 71,
@@ -1419,7 +1629,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 72,
@@ -1439,7 +1652,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 73,
@@ -1459,7 +1675,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 74,
@@ -1479,7 +1698,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 75,
@@ -1499,7 +1721,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 76,
@@ -1519,7 +1744,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 77,
@@ -1539,7 +1767,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 78,
@@ -1559,7 +1790,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 79,
@@ -1579,7 +1813,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 80,
@@ -1599,7 +1836,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 81,
@@ -1619,7 +1859,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 82,
@@ -1639,7 +1882,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 83,
@@ -1659,7 +1905,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 84,
@@ -1679,7 +1928,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 85,
@@ -1699,7 +1951,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 86,
@@ -1719,7 +1974,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 87,
@@ -1739,7 +1997,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 88,
@@ -1759,7 +2020,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 89,
@@ -1779,7 +2043,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 90,
@@ -1799,7 +2066,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 91,
@@ -1819,7 +2089,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 92,
@@ -1839,7 +2112,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 93,
@@ -1859,7 +2135,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 94,
@@ -1879,7 +2158,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 95,
@@ -1899,7 +2181,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 96,
@@ -1919,7 +2204,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 97,
@@ -1939,7 +2227,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 98,
@@ -1959,7 +2250,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Cancelled",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 99,
@@ -1979,7 +2273,10 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 	{
 		id: 100,
@@ -1999,6 +2296,9 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
-		termination_status: "Processing"
+		termination_status: "Complete",
+		simswop_status: "Pending",
+		date_requested: "02/02/2023",
+		date_fulfilled: "02/04/2023"
 	},
 ];

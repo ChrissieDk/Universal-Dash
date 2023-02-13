@@ -114,7 +114,7 @@ const Dashboard = () => {
 
 
   return (
-    <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
+    <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center '>
       <h1 className='text-xl mb-5 '>Dashboard</h1>
       <div className="flex flex-column justify-center text-center gap-4 pb-5">
         {/* <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
