@@ -69,13 +69,13 @@ const Billing = () => {
   const Status = ({ billing_status }) => {
     let className;
     if (billing_status === 'Active') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-3/5';
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center';
     } else if (billing_status === 'On Hold') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-3/5';
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center';
     } else if (billing_status === 'Cancelled') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-3/5';
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center';
     } else if (billing_status === 'Inactive') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-slate-800 bg-slate-200 rounded-lg bg-opacity-40 w-full text-center lg:w-3/5';
+      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-slate-800 bg-slate-200 rounded-lg bg-opacity-40 w-full text-center';
     } 
 
     return <div className={className}>{billing_status}</div>;
@@ -96,14 +96,12 @@ const Billing = () => {
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.package}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.cell_number}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.sim_number}</td>
-              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.early_termination_date}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.invoice_number}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.amount_ex_vat}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.vat_amount}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.payment_gateway}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.contract_end}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.billing_date}</td>
-              
             </tr>
           )
         })}

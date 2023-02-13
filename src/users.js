@@ -17,6 +17,8 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
+		termination_status: "Complete"
+		
 	},
 	{
 		id: 2,
@@ -36,6 +38,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Cancelled",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 3,
@@ -55,6 +58,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "On Hold",
 		billing_date: "04/04/2023",
+		termination_status: "Cancelled"
 		
 	},
 	{
@@ -75,6 +79,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Complete"
 	},
 	{
 		id: 5,
@@ -94,6 +99,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 6,
@@ -113,6 +119,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
+		termination_status: "Cancelled"
 	},
 	{
 		id: 7,
@@ -132,6 +139,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Cancelled",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 8,
@@ -151,6 +159,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "On Hold",
 		billing_date: "04/04/2023",
+		termination_status: "Complete"
 	},
 	{
 		id: 9,
@@ -170,6 +179,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 10,
@@ -189,6 +199,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 11,
@@ -208,6 +219,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 12,
@@ -227,6 +239,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 13,
@@ -246,6 +259,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 14,
@@ -265,6 +279,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 15,
@@ -284,6 +299,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 16,
@@ -303,6 +319,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 17,
@@ -322,6 +339,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 18,
@@ -341,6 +359,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 19,
@@ -360,6 +379,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 20,
@@ -379,6 +399,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 21,
@@ -398,6 +419,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 22,
@@ -417,6 +439,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 23,
@@ -436,6 +459,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 24,
@@ -455,6 +479,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 25,
@@ -474,6 +499,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 26,
@@ -493,6 +519,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 27,
@@ -512,6 +539,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 28,
@@ -531,6 +559,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 29,
@@ -550,6 +579,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 30,
@@ -569,6 +599,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 31,
@@ -588,6 +619,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 32,
@@ -607,6 +639,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 33,
@@ -626,6 +659,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 34,
@@ -645,6 +679,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 35,
@@ -664,6 +699,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 36,
@@ -683,6 +719,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 37,
@@ -702,6 +739,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 38,
@@ -721,6 +759,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 39,
@@ -740,6 +779,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 40,
@@ -759,6 +799,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 41,
@@ -778,6 +819,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 42,
@@ -797,6 +839,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 43,
@@ -816,6 +859,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 44,
@@ -835,6 +879,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 45,
@@ -854,6 +899,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 46,
@@ -873,6 +919,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 47,
@@ -892,6 +939,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 48,
@@ -911,6 +959,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 49,
@@ -930,6 +979,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 50,
@@ -949,6 +999,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 51,
@@ -968,6 +1019,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 52,
@@ -987,6 +1039,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 53,
@@ -1006,6 +1059,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 54,
@@ -1025,6 +1079,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 55,
@@ -1044,6 +1099,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 56,
@@ -1063,6 +1119,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 57,
@@ -1082,6 +1139,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 58,
@@ -1101,6 +1159,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 59,
@@ -1120,6 +1179,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 60,
@@ -1139,6 +1199,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 61,
@@ -1158,6 +1219,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 62,
@@ -1177,6 +1239,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 63,
@@ -1196,6 +1259,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 64,
@@ -1215,6 +1279,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 65,
@@ -1234,6 +1299,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 66,
@@ -1253,6 +1319,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 67,
@@ -1272,6 +1339,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 68,
@@ -1291,6 +1359,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 69,
@@ -1310,6 +1379,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 70,
@@ -1329,6 +1399,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 71,
@@ -1348,6 +1419,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 72,
@@ -1367,6 +1439,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 73,
@@ -1386,6 +1459,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 74,
@@ -1405,6 +1479,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 75,
@@ -1424,6 +1499,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 76,
@@ -1443,6 +1519,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 77,
@@ -1462,6 +1539,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 78,
@@ -1481,6 +1559,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 79,
@@ -1500,6 +1579,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 80,
@@ -1519,6 +1599,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 81,
@@ -1538,6 +1619,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 82,
@@ -1557,6 +1639,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 83,
@@ -1576,6 +1659,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 84,
@@ -1595,6 +1679,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 85,
@@ -1614,6 +1699,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 86,
@@ -1633,6 +1719,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 87,
@@ -1652,6 +1739,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 88,
@@ -1671,6 +1759,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 89,
@@ -1690,6 +1779,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 90,
@@ -1709,6 +1799,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 91,
@@ -1728,6 +1819,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 92,
@@ -1747,6 +1839,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 93,
@@ -1766,6 +1859,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 94,
@@ -1785,6 +1879,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 95,
@@ -1804,6 +1899,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 96,
@@ -1823,6 +1919,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 97,
@@ -1842,6 +1939,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 98,
@@ -1861,6 +1959,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Cancelled",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 99,
@@ -1880,6 +1979,7 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Active",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 	{
 		id: 100,
@@ -1899,5 +1999,6 @@ export const data = [
 		contract_end: "03/03/2023",
 		billing_status: "Inactive",
 		billing_date: "04/04/2023",
+		termination_status: "Processing"
 	},
 ];
