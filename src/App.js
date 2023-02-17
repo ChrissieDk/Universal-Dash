@@ -5,6 +5,7 @@ import Dashboard from './Dashboard';
 import Billing from './Billing';
 import TerminationRequest from './terminationRequest';
 import SimSwop from './simSwop';
+import Login from './Login';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route exact path='/Billing' element={<Billing />} />
         <Route exact path='/TerminationRequest' element={<TerminationRequest />} />
         <Route exact path='/SimSwop' element={<SimSwop />} />
+        <Route exact path='/Login' element={<Login />} />
         </Routes>
       </div>
     </BrowserRouter>
