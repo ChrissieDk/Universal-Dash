@@ -3,11 +3,18 @@ import { useState } from 'react';
 import { BiChevronLeft } from "react-icons/bi"
 import SidebarIcons from './components/SidebarIcons';
 import UserProfile from './components/UserProfile';
+import { useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
   const [toggle, setToggle] = useState(true)
+  const location = useLocation()
+  const isLoginPage = location.pathname === '/Login';
   return (
-    <div className={`${toggle ? "w-[5.8rem]" : ""} sidebar-container z-10 bg-slate-50 border border-slate-200`}>
+    <div className={`${toggle ? "w-[5.8rem]" : ""} 
+      sidebar-container z-10 bg-slate-50 border border-slate-200 
+      ${isLoginPage ? 'hidden' : ''}`}
+    >
+    
       {/* import userprofile and sidebaricons with toggle applied */}
       <UserProfile toggle={toggle}/>
       <SidebarIcons toggle={toggle}/>
