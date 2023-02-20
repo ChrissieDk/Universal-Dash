@@ -12,8 +12,8 @@ import { BiSupport } from 'react-icons/bi'
 export const datas = [
   {
     id: 1,
-    icon: <Link to='/'><RxDashboard /></Link>,
-    text: <Link to='/'>Dashboard</Link>,
+    icon: <Link to='/dashboard'><RxDashboard /></Link>,
+    text: <Link to='/dashboard'>Dashboard</Link>,
   },
   {
     id: 2,

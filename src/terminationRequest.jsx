@@ -54,7 +54,7 @@ const TerminationRequest = () => {
       return;
     } else {
       const matchedUsers = data.filter((user) => {
-        return `${user.first_name} ${user.last_name}`
+        return `${user.first_name} ${user.last_name} ${user.cell_number} ${user.sim_number}`
           .toLowerCase()
           .includes(event.target.value.toLowerCase())
       });

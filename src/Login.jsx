@@ -24,7 +24,7 @@ const Login = () => {
             <input className='border border-rounded-md px-2 py-2 cursor-pointer' type="password" name='password' id='password' placeholder='Password'/>
         </div>
         <div>
-            <Link to='/'><button className='w-full rounded bg-indigo-600 text-white py-2'>Sign in</button></Link>
+            <Link to='/dashboard'><button className='w-full rounded bg-indigo-600 text-white py-2'>Sign in</button></Link>
         </div>
         <div className="flex justify-between">
             <div className="flex items-center space-x-2">

@@ -54,7 +54,7 @@ const Billing = () => {
       return;
     } else {
       const matchedUsers = data.filter((user) => {
-        return `${user.first_name} ${user.last_name}`
+        return `${user.first_name} ${user.last_name} ${user.cell_number} ${user.sim_number}`
           .toLowerCase()
           .includes(event.target.value.toLowerCase())
       });
@@ -121,7 +121,7 @@ const Billing = () => {
 
   return (
     <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
-      <h1 className='text-xl mb-5 '>Billing</h1>
+      <h1 className='text-xl mb-5'>Billing</h1>
       <div className="flex flex-column justify-center text-center gap-4 pb-5">
         {/* <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
           <h1>Total Sales</h1>
