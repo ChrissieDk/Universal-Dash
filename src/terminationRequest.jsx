@@ -5,6 +5,7 @@ import { data } from './users'
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import Pagination from './components/Pagination';
 
+
 const TerminationRequest = () => {
 
   const [users, setUsers] = useState(data.slice(0, 10));
@@ -115,7 +116,7 @@ const TerminationRequest = () => {
 
   return (
     <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
-      <h1 className='text-xl mb-5 '>Termination request</h1>
+      <h1 className='text-xl mb-5'>Termination request</h1>
       <div className="flex flex-column justify-center text-center gap-4 pb-5">
         {/* <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
           <h1>Total Sales</h1>

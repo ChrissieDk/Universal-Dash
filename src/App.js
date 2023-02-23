@@ -7,6 +7,7 @@ import TerminationRequest from './terminationRequest';
 import SimSwop from './simSwop';
 import Login from './Login';
 import Register from './Register';
+import UserIdClick from './UserIdClick';
 
 const App = () => {
  
@@ -21,8 +22,8 @@ const App = () => {
           <Route exact path="/Billing" element={<Billing />} />
           <Route exact path="/TerminationRequest" element={<TerminationRequest />} />
           <Route exact path="/SimSwop" element={<SimSwop />} />
-          
           <Route exact path="/Register" element={<Register />} />
+          <Route exact path="/UserIdClick" element={<UserIdClick />} />
         </Routes>
       </div>
     </BrowserRouter>

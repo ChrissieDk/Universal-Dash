@@ -38,7 +38,7 @@ export const datas = [
   },
   {
     id: 6,
-    icon: <Link to='Login'><FiLogOut /></Link>,
+    icon: <Link to='/Login'><FiLogOut /></Link>,
     text: <Link to='/Login'>Logout</Link>,
   },
 ];
