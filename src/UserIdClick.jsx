@@ -27,68 +27,136 @@ const UserIdClick = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 h-[75%] w-[80%] overflow-y-scroll" style={{ 'overflowY': 'scroll' }}>
                     <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
                         <div>
-                            <h1 className='mb-5'>Contract status</h1>
-                            <span> <Status status={data[0].status} /></span>
+                            <h1 className='mb-5 md:hidden'>Contract status</h1>
+                            <div className='lg:mt-7'>
+                                <span> <Status status={data[0].status} /></span>
+                            </div>
                         </div>
-                        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gray-300 rounded-b-lg hidden sm:block"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Contract status</h1>
+                        </div>
                     </div>
                     <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
                         <div>
-                            <h1 className='mb-5'>Cellphone number</h1>
-                            <span> {data[0].cell_number}</span>
+                            <h1 className='mb-5 md:hidden'>Cellphone number</h1>
+                            <div className="lg:mt-7">
+                                <span> {data[0].cell_number}</span>
+                            </div>
                         </div>
-                        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gray-300 rounded-b-lg hidden sm:block"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Cellphone number</h1>
+                        </div>
                     </div>
                     <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
                         <div>
-                            <h1 className='mb-5'>Current package</h1>
-                            <span> {data[0].package}</span>
+                            <h1 className='mb-5 md:hidden'>Current package</h1>
+                            <div className="lg:mt-7">
+                                <span> {data[0].package}</span>
+                            </div>
                         </div>
-                        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gray-300 rounded-b-lg hidden sm:block"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Current package</h1>
+                        </div>                    </div>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
+                        <div>
+                            <h1 className='mb-5 md:hidden'>Sim number</h1>
+                            <div className="lg:mt-7">
+                                <span>{data[0].sim_number}</span>
+                            </div>
+                        </div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Sim number</h1>
+                        </div>                   
+                     </div>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
+                        <div>
+                            <h1 className='mb-5 md:hidden'>Package term (months) </h1>
+                            <div className="lg:mt-7">
+                            <span>{data[0].package_term} months</span>
+                            </div>
+                        </div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Package term</h1>
+                        </div>                    
                     </div>
                     <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
                         <div>
-                            <h1 className='mb-5'>Sim number</h1>
-                            <span>{data[0].sim_number}</span>
-                        </div>
-                        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gray-300 rounded-b-lg hidden sm:block"></div>
-                    </div>
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
-                        <div>
-                            <h1 className='mb-5'>Package term (months) </h1>
-                            <span>{data[0].package_term}</span>
-                        </div>
-                        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gray-300 rounded-b-lg hidden sm:block"></div>
-                    </div>
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
-                        <div>
-                            <h1 className='mb-5'>Activation date</h1>
+                            <h1 className='mb-5 md:hidden'>Activation date</h1>
+                            <div className="lg:mt-7">
                             <span>{data[0].date}</span>
+                            </div>
                         </div>
-                        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gray-300 rounded-b-lg hidden sm:block"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Activation date</h1>
+                        </div>                    
                     </div>
                     <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
                         <div>
-                            <h1 className='mb-5'>Contract end</h1>
+                            <h1 className='mb-5 md:hidden'>Contract end</h1>
+                            <div className="lg:mt-7">
                             <span>{data[0].contract_end}</span>
+                            </div>
                         </div>
-                        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gray-300 rounded-b-lg hidden sm:block"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Contract end</h1>
+                        </div>                    
                     </div>
                     <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
                         <div>
-                            <h1 className='mb-5'>Billing status</h1>
+                            <h1 className='mb-5 md:hidden'>Billing status</h1>
+                            <div className="lg:mt-7">
                             <span><Status status={data[0].billing_status} /></span>
+                            </div>
                         </div>
-                        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gray-300 rounded-b-lg hidden sm:block"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Billing status</h1>
+                        </div>                    
                     </div>
                     <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
                         <div>
-                            <h1 className='mb-5'>Billing date</h1>
+                            <h1 className='mb-5 md:hidden'>Billing date</h1>
+                            <div className="lg:mt-7">
                             <span>{data[0].billing_date}</span>
+                            </div>
                         </div>
-                        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gray-300 rounded-b-lg hidden sm:block"></div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Billing date</h1>
+                        </div>                    
                     </div>
-                    
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
+                        <div>
+                            <h1 className='mb-5 md:hidden'>Billing date</h1>
+                            <div className="lg:mt-7">
+                            <span>{data[0].billing_date}</span>
+                            </div>
+                        </div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Contract </h1>
+                        </div>                    
+                    </div>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
+                        <div>
+                            <h1 className='mb-5 md:hidden'>Billing date</h1>
+                            <div className="lg:mt-7">
+                            <span>{data[0].billing_date}</span>
+                            </div>
+                        </div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Contract status</h1>
+                        </div>                    
+                    </div>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300">
+                        <div>
+                            <h1 className='mb-5 md:hidden'>Billing date</h1>
+                            <div className="lg:mt-7">
+                            <span>{data[0].billing_date}</span>
+                            </div>
+                        </div>
+                        <div className="absolute bottom-0 left-0 w-full h-[30%] bg-slate-600 rounded-b-lg hidden sm:block">
+                            <h1 className='text-white pt-2.5 pl-2 text-md font-medium tracking-wider'>Contract status</h1>
+                        </div>                    
+                    </div>
+
                 </div>
             </div>
         </>

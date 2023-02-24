@@ -88,7 +88,9 @@ const TerminationRequest = () => {
         {users.map((user) => {
           return (
             <tr key={user.id}>
-              <td className='font-bold text-blue-500 hover:underline pl-7 cursor-pointer'>{user.id}</td>
+              <td className='font-bold text-blue-500 hover:underline pl-7 cursor-pointer'>
+              <a href={`/UserIdClick?id=${user.id}`}>{user.id}</a>
+              </td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{`${user.first_name} ${user.last_name}`}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'><Status termionation_status={user.termination_status} /></td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.date}</td>
