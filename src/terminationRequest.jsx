@@ -67,17 +67,17 @@ const TerminationRequest = () => {
 
   // Returns a div with a status-dependent CSS class name.
 
-  const Status = ({ termionation_status }) => {
+  const Status = ({ termination_status }) => {
     let className;
-    if (termionation_status === 'Complete') {
+    if (termination_status === 'Complete') {
       className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    } else if (termionation_status === 'Processing') {
+    } else if (termination_status === 'Processing') {
       className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    } else if (termionation_status === 'Cancelled') {
+    } else if (termination_status === 'Cancelled') {
       className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
     } 
 
-    return <div className={className}>{termionation_status}</div>;
+    return <div className={className}>{termination_status}</div>;
   };
 
   // Maps through the users array and returns a table row for each user, displaying information such as their name, status, date, etc.
@@ -92,7 +92,7 @@ const TerminationRequest = () => {
               <a href={`/UserIdClick?id=${user.id}`}>{user.id}</a>
               </td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{`${user.first_name} ${user.last_name}`}</td>
-              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'><Status termionation_status={user.termination_status} /></td>
+              <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'><Status termination_status={user.termination_status} /></td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.date}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.package}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.cell_number}</td>
