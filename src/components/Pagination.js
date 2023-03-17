@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import ReactPaginate from 'react-paginate';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 
-
 export default function Pagination(props) {
   const { users } = props;
   const [currentItems, setCurrentItems] = useState([]);
@@ -16,29 +15,27 @@ export default function Pagination(props) {
     if (!users) {
       return;
     }
-
+  
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(users?.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(users?.length / itemsPerPage));
+    setCurrentItems(users.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(users.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, users]);
-
   const handlePageClick = ({ selected }) => {
     const newOffset = selected * itemsPerPage;
     if (newOffset < users.length) {
       setItemOffset(newOffset);
       setSelectedPage(selected);
       setCurrentItems(users.slice(newOffset, newOffset + itemsPerPage));
-      
     }
   };
 
   return (
     <>
       <div>
-        {currentItems?.map((users, index) => {
+        {currentItems.map((user) => {
           return (
-            <div key={users.id}>
-              {users.data}
+            <div key={user.id}>
+              {user.first_name} {user.last_name}
             </div>
           )
         })}
@@ -54,12 +51,7 @@ export default function Pagination(props) {
         pageRangeDisplayed={3}
         pageCount={pageCount}
         previousLabel={<BiLeftArrowAlt className="text-lg" />}
-        renderOnZeroPageCount={null}
-
-
       />
-
     </>
-
   );
-};
+}

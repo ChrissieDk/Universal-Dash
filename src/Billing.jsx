@@ -1,12 +1,14 @@
 import React from 'react'
 import { Fragment } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { data } from './users'
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
-import Pagination from './components/Pagination';
+import ReactPaginate from 'react-paginate';
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+
 
 const Billing = () => {
-  
+
   const [users, setUsers] = useState(data.slice(0, 10));
   const [sorted, setSorted] = useState({ sorted: "id", reversed: "false" });
   const [searchPhrase, setSearchPhrase] = useState("");
@@ -64,6 +66,31 @@ const Billing = () => {
     setSearchPhrase(event.target.value)
   };
 
+  const [currentItems, setCurrentItems] = useState([]);
+  const [pageCount, setPageCount] = useState(1);
+  const [itemOffset, setItemOffset] = useState(0);
+  const [selectedPage, setSelectedPage] = useState(0);
+  const itemsPerPage = 10;
+
+  useEffect(() => {
+    if (!data) {
+      return;
+    }
+
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(data.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(data.length / itemsPerPage));
+  }, [itemOffset]);
+
+  const handlePageClick = ({ selected }) => {
+    const newOffset = selected * itemsPerPage;
+    if (newOffset < data.length) {
+      setItemOffset(newOffset);
+      setSelectedPage(selected);
+      setCurrentItems(data.slice(newOffset, newOffset + itemsPerPage));
+    }
+  };
+
   // Returns a div with a status-dependent CSS class name.
 
   const Status = ({ billing_status }) => {
@@ -76,7 +103,7 @@ const Billing = () => {
       className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
     } else if (billing_status === 'Inactive') {
       className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-slate-800 bg-slate-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    } 
+    }
 
     return <div className={className}>{billing_status}</div>;
   };
@@ -86,11 +113,11 @@ const Billing = () => {
   const renderUsers = () => {
     return (
       <Fragment>
-        {users.map((user) => {
+        {currentItems.map((user) => {
           return (
             <tr key={user.id}>
               <td className='font-bold text-blue-500 hover:underline pl-7 cursor-pointer'>
-              <a href={`/UserIdClick?id=${user.id}`}>{user.id}</a>
+                <a href={`/UserIdClick?id=${user.id}`}>{user.id}</a>
               </td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{`${user.first_name} ${user.last_name}`}</td>
               <td className=' min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'><Status billing_status={user.billing_status} /></td>
@@ -180,8 +207,16 @@ const Billing = () => {
         </div>
       </div>
       <div >
-        <Pagination
-          users={data}
+        <ReactPaginate
+          className="justify-center text-center items-center flex p-3 gap-5"
+          forcePage={pageCount > 0 ? selectedPage : 0}
+          activeClassName="bg-slate-500 text-white rounded-sm p-1 opacity-50"
+          breakLabel="..."
+          nextLabel={<BiRightArrowAlt className="text-lg" />}
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={3}
+          pageCount={pageCount}
+          previousLabel={<BiLeftArrowAlt className="text-lg" />}
         />
       </div>
     </div>
