@@ -27,7 +27,7 @@ const TerminationRequest = () => {
       };
       return userB.id - userA.id;
     });
-    setUsers(usersCopy);
+    setCurrentItems(usersCopy.slice(0, 10));
   };
 
   // Sorts the users array by full name (first and last name) in ascending or descending order, depending on the state of sorted.reversed.
@@ -45,7 +45,7 @@ const TerminationRequest = () => {
 
       return fullNameA.localeCompare(fullNameB);
     });
-    setUsers(usersCopy);
+    setCurrentItems(usersCopy.slice(0, 13));
   };
 
   // Filters the users array based on a search phrase entered by the user, either matching full name (first and last name) or returning all users if the search phrase is an empty string.
@@ -60,9 +60,9 @@ const TerminationRequest = () => {
         return `${user.first_name} ${user.last_name} ${user.cell_number} ${user.sim_number}`
           .toLowerCase()
           .includes(event.target.value.toLowerCase())
-      });
+      }).slice(0, 13);
 
-      setUsers(matchedUsers);
+      setCurrentItems(matchedUsers);
     }
     setSearchPhrase(event.target.value)
   };
@@ -97,13 +97,26 @@ const TerminationRequest = () => {
 
   const Status = ({ termination_status }) => {
     let className;
-    if (termination_status === 'Complete') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    } else if (termination_status === 'Processing') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    } else if (termination_status === 'Cancelled') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+    switch (termination_status) {
+      case 'Complete':
+        className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+        break;
+      case 'Processing':
+        className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+        break;
+      case 'Cancelled':
+        className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+        break;
+      default:
+        break;
     }
+    // if (termination_status === 'Complete') {
+    //   className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+    // } else if (termination_status === 'Processing') {
+    //   className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+    // } else if (termination_status === 'Cancelled') {
+    //   className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+    // }
 
     return <div className={className}>{termination_status}</div>;
   };

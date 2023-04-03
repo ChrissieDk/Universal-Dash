@@ -9,9 +9,18 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 
 const Billing = () => {
 
-  const [users, setUsers] = useState(data.slice(0, 10));
+  const [users, setUsers] = useState([]);
   const [sorted, setSorted] = useState({ sorted: "id", reversed: "false" });
   const [searchPhrase, setSearchPhrase] = useState("");
+  const [currentItems, setCurrentItems] = useState([]);
+  const [pageCount, setPageCount] = useState(1);
+  const [itemOffset, setItemOffset] = useState(0);
+  const [selectedPage, setSelectedPage] = useState(0);
+  const itemsPerPage = 10;
+
+  useEffect(() => {
+    setUsers([...data])
+  }, []);
 
   // toggle sort through id in ascending or descending order
 
@@ -26,7 +35,7 @@ const Billing = () => {
       };
       return userB.id - userA.id;
     });
-    setUsers(usersCopy);
+    setCurrentItems(usersCopy);
   };
 
   // Sorts the users array by full name (first and last name) in ascending or descending order, depending on the state of sorted.reversed.
@@ -44,7 +53,7 @@ const Billing = () => {
 
       return fullNameA.localeCompare(fullNameB);
     });
-    setUsers(usersCopy);
+    setCurrentItems(usersCopy.slice(0, 13));
   };
 
   // Filters the users array based on a search phrase entered by the user, either matching full name (first and last name) or returning all users if the search phrase is an empty string.
@@ -55,32 +64,27 @@ const Billing = () => {
       setSearchPhrase("")
       return;
     } else {
-      const matchedUsers = data.filter((user) => {
-        return `${user.first_name} ${user.last_name} ${user.cell_number} ${user.sim_number}`
+      const matchedUsers = data.filter((data) => {
+        return `${data.first_name} ${data.last_name} ${data.cell_number} ${data.sim_number}`
           .toLowerCase()
           .includes(event.target.value.toLowerCase())
-      });
+      }).slice(0, 13);
 
-      setUsers(matchedUsers);
+      setCurrentItems(matchedUsers);
     }
     setSearchPhrase(event.target.value)
   };
 
-  const [currentItems, setCurrentItems] = useState([]);
-  const [pageCount, setPageCount] = useState(1);
-  const [itemOffset, setItemOffset] = useState(0);
-  const [selectedPage, setSelectedPage] = useState(0);
-  const itemsPerPage = 10;
 
   useEffect(() => {
-    if (!data) {
+    if (!users) {
       return;
     }
 
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(data.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(data.length / itemsPerPage));
-  }, [itemOffset]);
+  }, [users, itemOffset, itemsPerPage]);
 
   const handlePageClick = ({ selected }) => {
     const newOffset = selected * itemsPerPage;
@@ -95,16 +99,22 @@ const Billing = () => {
 
   const Status = ({ billing_status }) => {
     let className;
-    if (billing_status === 'Active') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    } else if (billing_status === 'On Hold') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    } else if (billing_status === 'Cancelled') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    } else if (billing_status === 'Inactive') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-slate-800 bg-slate-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+    switch (billing_status) {
+      case 'Active':
+        className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24'
+        break;
+      case 'On Hold':
+        className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+        break;
+      case 'Cancelled':
+        className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24'
+        break;
+      case 'Inactive':
+        className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-slate-800 bg-slate-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24'
+        break;
+      default:
+        break;
     }
-
     return <div className={className}>{billing_status}</div>;
   };
 

@@ -9,9 +9,18 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 
 const Dashboard = () => {
 
-  const [users, setUsers] = useState(data.slice(0, 10));
+  const [users, setUsers] = useState([]);
   const [sorted, setSorted] = useState({ sorted: "id", reversed: "false" });
   const [searchPhrase, setSearchPhrase] = useState("");
+  const [currentItems, setCurrentItems] = useState([]);
+  const [pageCount, setPageCount] = useState(1);
+  const [itemOffset, setItemOffset] = useState(0);
+  const [selectedPage, setSelectedPage] = useState(0);
+  const itemsPerPage = 10;
+
+  useEffect(() => {
+    setUsers([...data])
+  }, []);
 
   // toggle sort through id in ascending or descending order
 
@@ -26,7 +35,7 @@ const Dashboard = () => {
       };
       return userB.id - userA.id;
     });
-    setUsers(usersCopy);
+    setCurrentItems(usersCopy.slice(0, 10));
   };
 
   // Sorts the users array by full name (first and last name) in ascending or descending order, depending on the state of sorted.reversed.
@@ -43,7 +52,7 @@ const Dashboard = () => {
       };
       return fullNameA.localeCompare(fullNameB);
     });
-    setUsers(usersCopy);
+    setCurrentItems(usersCopy.slice(0, 13));
   };
 
   // Filters the users array based on a search phrase entered by the user, either matching full name (first and last name) or returning all users if the search phrase is an empty string.
@@ -54,32 +63,29 @@ const Dashboard = () => {
       setSearchPhrase("")
       return;
     } else {
-      const matchedUsers = data.filter((user) => {
-        return `${user.first_name} ${user.last_name} ${user.cell_number} ${user.sim_number}`
+      const matchedUsers = data.filter((data) => {
+        return `${data.first_name} ${data.last_name} ${data.cell_number} ${data.sim_number} ${data.status}`
           .toLowerCase()
           .includes(event.target.value.toLowerCase())
-      });
+      }).slice(0, 13);
 
-      setUsers(matchedUsers);
+      setCurrentItems(matchedUsers);
     }
     setSearchPhrase(event.target.value)
   };
 
-  const [currentItems, setCurrentItems] = useState([]);
-  const [pageCount, setPageCount] = useState(1);
-  const [itemOffset, setItemOffset] = useState(0);
-  const [selectedPage, setSelectedPage] = useState(0);
-  const itemsPerPage = 10;
+  // useEffect hook updates the current items and page count based on the itemOffset and itemsPerPage values.
 
   useEffect(() => {
-    if (!data) {
+    if (!users) {
       return;
     }
-
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(data.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(data.length / itemsPerPage));
-  }, [itemOffset]);
+  }, [users, itemOffset, itemsPerPage]);
+
+  // This function handles page clicks in the pagination component, updating the item offset, selected page, and current items state based on the selected page number and the number of items per page.
 
   const handlePageClick = ({ selected }) => {
     const newOffset = selected * itemsPerPage;
@@ -94,14 +100,19 @@ const Dashboard = () => {
 
   const Status = ({ status }) => {
     let className;
-    if (status === 'Active') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    } else if (status === 'On Hold') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    } else if (status === 'Cancelled') {
-      className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    }
+    switch (status) {
+      case 'Active':
+        className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+        break;
+      case 'On Hold':
+        className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+        break;
+      case 'Cancelled':
+        className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
+        break;
+      default:
 
+    }
     return <div className={className}>{status}</div>;
   };
 
@@ -142,7 +153,7 @@ const Dashboard = () => {
 
   return (
     <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center '>
-      <h1 className='text-xl mb-5 '>Dashboard</h1>
+      <h1 className='text-xl mb-5'>Dashboard</h1>
       <div>
         <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full sm:mb-5'
           type='text'

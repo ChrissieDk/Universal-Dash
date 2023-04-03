@@ -9,6 +9,7 @@ import Login from './Login';
 import Register from './Register';
 import UserIdClick from './UserIdClick';
 import ForgotPassword from './forgotPassword';
+import MyAccount from './myAccount';
 
 const App = () => {
 //  let location = useLocation()
@@ -20,7 +21,6 @@ const App = () => {
        <Sidebar />
       
         <Routes>
-        
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path="/Billing" element={<Billing />} />
@@ -29,6 +29,7 @@ const App = () => {
           <Route exact path="/Register" element={<Register />} />
           <Route exact path="/UserIdClick" element={<UserIdClick />} />
           <Route exact path="/forgotPassword" element={<ForgotPassword />} />
+          <Route exact path="/myAccount" element={<MyAccount />} />
         </Routes>
       </div>
     </BrowserRouter>
