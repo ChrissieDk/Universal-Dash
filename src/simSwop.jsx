@@ -76,7 +76,7 @@ const SimSwop = () => {
     }
     setSearchPhrase(event.target.value)
   };
-  
+
   useEffect(() => {
     if (!users) {
       return;
@@ -112,13 +112,6 @@ const SimSwop = () => {
       default:
         break;
     }
-    // if (simswop_status === 'Completed') {
-    //   className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    // } else if (simswop_status === 'Pending') {
-    //   className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    // } else if (simswop_status === 'Rejected') {
-    //   className = 'p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-40 w-full text-center lg:w-24';
-    // }
 
     return <div className={className}>{simswop_status}</div>;
   };
@@ -159,72 +152,59 @@ const SimSwop = () => {
 
   return (
     <>
-    <Header />
-    <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
-      <h1 className='text-xl mb-5 '>Simswop</h1>
-      <div className="flex flex-column justify-center text-center gap-4 pb-5">
-        {/* <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
-          <h1>Total Sales</h1>
-          <span className='text-lime-600'>3421</span>
+      <Header />
+      <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
+        <h1 className='text-xl mb-5 '>Simswop</h1>
+        <div>
+          <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full'
+            type='text'
+            placeholder='Search'
+            value={searchPhrase}
+            onChange={search}
+          />
         </div>
-        <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
-          <h1>Active users</h1>
-          <span className='text-lime-600'>3421</span>
-        </div>
-        <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
-          <h1>Example</h1>
-          <span className='text-lime-600'>3421</span>
-        </div> */}
-      </div>
-      <div>
-        <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full'
-          type='text'
-          placeholder='Search'
-          value={searchPhrase}
-          onChange={search}
-        />
-      </div>
-      <div className='w-full border border-slate-100 rounded-lg'>
-        <div className='overflow-auto rounded-lg shadow'>
-          <table className='w-full pt-10'>
-            <thead className='bg-slate-50 border-b-2 border-slate-200'>
-              <tr>
-                <th onClick={sortById} className='p-3 text-sm font-semibold tracking-wide text-left'>ID
-                  {sorted.sorted === "id" ? renderArrow() : null}
-                </th>
-                <th onClick={sortByName} className='p-3 text-sm font-semibold tracking-wide text-left'>Name
-                  {sorted.sorted === "name" ? renderArrow() : null}
-                </th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Status</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Date requested</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Date fulfilled</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Cell number</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Sim number</th>
-              </tr>
-            </thead>
+        <div className='w-full border border-slate-100 rounded-lg'>
+          <div className='overflow-auto rounded-lg shadow'>
+            <table className='w-full pt-10'>
+              <thead className='bg-slate-50 border-b-2 border-slate-200'>
+                <tr>
+                  <th onClick={sortById} className='p-3 text-sm font-semibold tracking-wide text-left'>ID
+                    {sorted.sorted === "id" ? renderArrow() : null}
+                  </th>
+                  <th onClick={sortByName} className='p-3 text-sm font-semibold tracking-wide text-left'>Name
+                    {sorted.sorted === "name" ? renderArrow() : null}
+                  </th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Status</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Date requested</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Date fulfilled</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Cell number</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Sim number</th>
+                </tr>
+              </thead>
 
-            <tbody className='divide-y divide-gray-200'>
-              {renderUsers()}
-            </tbody>
+              <tbody className='divide-y divide-gray-200'>
+                {renderUsers()}
+              </tbody>
 
-          </table>
+            </table>
+          </div>
         </div>
+        {/* React pagination config */}
+        <div>
+          <ReactPaginate
+            className="justify-center text-center items-center flex p-3 gap-5"
+            forcePage={pageCount > 0 ? selectedPage : 0}
+            activeClassName="bg-slate-500 text-white rounded-sm p-1 opacity-50"
+            breakLabel="..."
+            nextLabel={<BiRightArrowAlt className="text-lg" />}
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={3}
+            pageCount={pageCount}
+            previousLabel={<BiLeftArrowAlt className="text-lg" />}
+          />
+        </div>
+        <Footer />
       </div>
-      <div >
-        <ReactPaginate
-          className="justify-center text-center items-center flex p-3 gap-5"
-          forcePage={pageCount > 0 ? selectedPage : 0}
-          activeClassName="bg-slate-500 text-white rounded-sm p-1 opacity-50"
-          breakLabel="..."
-          nextLabel={<BiRightArrowAlt className="text-lg" />}
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={3}
-          pageCount={pageCount}
-          previousLabel={<BiLeftArrowAlt className="text-lg" />}
-        />
-      </div>
-      <Footer />
-    </div>
     </>
   )
 }

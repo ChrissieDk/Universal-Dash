@@ -162,80 +162,66 @@ const Billing = () => {
 
   return (
     <>
-    <Header />
-  
-    <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
-      <h1 className='text-xl mb-5'>Billing</h1>
-      <div className="flex flex-column justify-center text-center gap-4 pb-5">
-        {/* <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
-          <h1>Total Sales</h1>
-          <span className='text-lime-600'>3421</span>
-        </div>
-        <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
-          <h1>Active users</h1>
-          <span className='text-lime-600'>3421</span>
-        </div>
-        <div className="w-1/3 p-3 border border-slate-200 rounded-lg py-11 bg-slate-50">
-          <h1>Example</h1>
-          <span className='text-lime-600'>3421</span>
-        </div> */}
-      </div>
-      <div>
-        <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full'
-          type='text'
-          placeholder='Search'
-          value={searchPhrase}
-          onChange={search}
-        />
-      </div>
-      <div className='w-full border border-slate-100 rounded-lg'>
-        <div className='overflow-auto rounded-lg shadow'>
-          <table className='w-full pt-10'>
-            <thead className='bg-slate-50 border-b-2 border-slate-200'>
-              <tr>
-                <th onClick={sortById} className='p-3 text-sm font-semibold tracking-wide text-left'>ID
-                  {sorted.sorted === "id" ? renderArrow() : null}
-                </th>
-                <th onClick={sortByName} className='p-3 text-sm font-semibold tracking-wide text-left'>Name
-                  {sorted.sorted === "name" ? renderArrow() : null}
-                </th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Status</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Date</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Package</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Cell number</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Sim number</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Early termination</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Invoice number</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Amount ex Vat</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Vat amount</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Payment Gateway</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Contract end</th>
-                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Billing date</th>
-              </tr>
-            </thead>
+      <Header />
 
-            <tbody className='divide-y divide-gray-200'>
-              {renderUsers()}
-            </tbody>
-
-          </table>
+      <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
+        <h1 className='text-xl mb-5'>Billing</h1>
+        <div>
+          <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full'
+            type='text'
+            placeholder='Search'
+            value={searchPhrase}
+            onChange={search}
+          />
         </div>
+        <div className='w-full border border-slate-100 rounded-lg'>
+          <div className='overflow-auto rounded-lg shadow'>
+            <table className='w-full pt-10'>
+              <thead className='bg-slate-50 border-b-2 border-slate-200'>
+                <tr>
+                  <th onClick={sortById} className='p-3 text-sm font-semibold tracking-wide text-left'>ID
+                    {sorted.sorted === "id" ? renderArrow() : null}
+                  </th>
+                  <th onClick={sortByName} className='p-3 text-sm font-semibold tracking-wide text-left'>Name
+                    {sorted.sorted === "name" ? renderArrow() : null}
+                  </th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Status</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Date</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Package</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Cell number</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Sim number</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Early termination</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Invoice number</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Amount ex Vat</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Vat amount</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Payment Gateway</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Contract end</th>
+                  <th className='p-3 text-sm font-semibold tracking-wide text-left'>Billing date</th>
+                </tr>
+              </thead>
+
+              <tbody className='divide-y divide-gray-200'>
+                {renderUsers()}
+              </tbody>
+
+            </table>
+          </div>
+        </div>
+        <div >
+          <ReactPaginate
+            className="justify-center text-center items-center flex p-3 gap-5"
+            forcePage={pageCount > 0 ? selectedPage : 0}
+            activeClassName="bg-slate-500 text-white rounded-sm p-1 opacity-50"
+            breakLabel="..."
+            nextLabel={<BiRightArrowAlt className="text-lg" />}
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={3}
+            pageCount={pageCount}
+            previousLabel={<BiLeftArrowAlt className="text-lg" />}
+          />
+        </div>
+        <Footer />
       </div>
-      <div >
-        <ReactPaginate
-          className="justify-center text-center items-center flex p-3 gap-5"
-          forcePage={pageCount > 0 ? selectedPage : 0}
-          activeClassName="bg-slate-500 text-white rounded-sm p-1 opacity-50"
-          breakLabel="..."
-          nextLabel={<BiRightArrowAlt className="text-lg" />}
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={3}
-          pageCount={pageCount}
-          previousLabel={<BiLeftArrowAlt className="text-lg" />}
-        />
-      </div>
-      <Footer />
-    </div>
     </>
   )
 }
