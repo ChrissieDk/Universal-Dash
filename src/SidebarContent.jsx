@@ -7,10 +7,16 @@ import { FiLogOut } from "react-icons/fi";
 import { BsSim } from "react-icons/bs";
 import { BiSupport } from 'react-icons/bi'
 import { MdAccountCircle } from 'react-icons/md'
+import logoDark from './assets/logo_dark2.png'
 
 // Navbar list with icons
 
 export const datas = [
+  {
+    id: 10,
+    img: <img className="flex justify-center" src={logoDark} alt="Logo" />,
+    
+  },
   {
     id: 1,
     icon: <Link to='/myAccount'><MdAccountCircle /></Link>,

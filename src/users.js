@@ -20,7 +20,8 @@ export const data = [
 		termination_status: "Complete",
 		simswop_status: "Pending",
 		date_requested: "02/02/2023",
-		date_fulfilled: "N/A"
+		date_fulfilled: "N/A",
+		remaining_term: "2mo, 3d"
 	},
 	{
 		id: 2,
@@ -43,7 +44,8 @@ export const data = [
 		termination_status: "Processing",
 		simswop_status: "Completed",
 		date_requested: "02/02/2023",
-		date_fulfilled: "02/04/2023"
+		date_fulfilled: "02/04/2023",
+		remaining_term: "2mo, 0d"
 	},
 	{
 		id: 3,
@@ -66,7 +68,8 @@ export const data = [
 		termination_status: "Cancelled",
 		simswop_status: "Pending",
 		date_requested: "02/02/2023",
-		date_fulfilled: "N/A"
+		date_fulfilled: "N/A",
+		remaining_term: "1mo, 10d"
 
 		
 	},
@@ -91,7 +94,8 @@ export const data = [
 		termination_status: "Complete",
 		simswop_status: "Rejected",
 		date_requested: "02/02/2023",
-		date_fulfilled: "02/04/2023"
+		date_fulfilled: "02/04/2023",
+		remaining_term: "0mo, 20d"
 	},
 	{
 		id: 5,
@@ -114,7 +118,8 @@ export const data = [
 		termination_status: "Processing",
 		simswop_status: "Completed",
 		date_requested: "02/02/2023",
-		date_fulfilled: "02/04/2023"
+		date_fulfilled: "02/04/2023",
+		remaining_term: "2mo, 0d"
 	},
 	{
 		id: 6,
@@ -137,7 +142,8 @@ export const data = [
 		termination_status: "Complete",
 		simswop_status: "Completed",
 		date_requested: "02/02/2023",
-		date_fulfilled: "02/04/2023"
+		date_fulfilled: "02/04/2023",
+		remaining_term: "1mo, 9d"
 	},
 	{
 		id: 7,
@@ -160,7 +166,8 @@ export const data = [
 		termination_status: "Cancelled",
 		simswop_status: "Pending",
 		date_requested: "02/02/2023",
-		date_fulfilled: "N/A"
+		date_fulfilled: "N/A",
+		remaining_term: "1mo, 1d"
 	},
 	{
 		id: 8,
@@ -183,7 +190,8 @@ export const data = [
 		termination_status: "Complete",
 		simswop_status: "Pending",
 		date_requested: "02/02/2023",
-		date_fulfilled: "N/A"
+		date_fulfilled: "N/A",
+		remaining_term: "3mo, 0d"
 	},
 	{
 		id: 9,
@@ -206,7 +214,8 @@ export const data = [
 		termination_status: "Complete",
 		simswop_status: "Pending",
 		date_requested: "02/02/2023",
-		date_fulfilled: "N/A"
+		date_fulfilled: "N/A",
+		remaining_term: "0mo, 3d"
 	},
 	{
 		id: 10,
@@ -229,7 +238,8 @@ export const data = [
 		termination_status: "Processing",
 		simswop_status: "Pending",
 		date_requested: "02/02/2023",
-		date_fulfilled: "N/A"
+		date_fulfilled: "N/A",
+		remaining_term: "1mo, 2d"
 	},
 	{
 		id: 11,

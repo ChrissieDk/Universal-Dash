@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './components/Footer';
 import { FaUserCircle } from 'react-icons/fa';
 import { AiOutlinePauseCircle } from 'react-icons/ai';
 import { FiPackage } from 'react-icons/fi';
@@ -8,6 +9,7 @@ import { FcSalesPerformance } from 'react-icons/fc';
 import { GrCompliance } from 'react-icons/gr';
 import { BsBank } from 'react-icons/bs';
 import { BsBullseye } from 'react-icons/bs';
+
 
 
 const myAccount = () => {
@@ -21,7 +23,7 @@ const myAccount = () => {
             <div className="fixed flex justify-center items-center h-full w-[90%] ml-20">
                 <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-1 h-[75%] w-[60%] overflow-y-scroll" style={{ 'overflowY': 'scroll' }}>
                     <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md" style={{ width: '92%', height: '90%' }}>
-                        <div className='flex items-center'>
+                        <div className='flex items-end'>
                             <FaUserCircle className='my-2 mx-2'/>
                             <h2 className='lg:text-2xl'>Active users</h2>
                             
@@ -110,6 +112,7 @@ const myAccount = () => {
                             </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         </>
 

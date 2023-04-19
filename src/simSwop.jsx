@@ -1,17 +1,28 @@
 import React from 'react';
 import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
-import { data } from './users'
+import { data } from './users';
+import Footer from './components/Footer';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import ReactPaginate from 'react-paginate';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import Header from './components/Header';
 
 
 const SimSwop = () => {
 
-  const [users, setUsers] = useState(data.slice(0, 10));
+  const [users, setUsers] = useState([]);
   const [sorted, setSorted] = useState({ sorted: "id", reversed: "false" });
   const [searchPhrase, setSearchPhrase] = useState("");
+  const [currentItems, setCurrentItems] = useState([]);
+  const [pageCount, setPageCount] = useState(1);
+  const [itemOffset, setItemOffset] = useState(0);
+  const [selectedPage, setSelectedPage] = useState(0);
+  const itemsPerPage = 10;
+
+  useEffect(() => {
+    setUsers([...data])
+  }, []);
 
   // toggle sort through id in ascending or descending order
 
@@ -26,7 +37,7 @@ const SimSwop = () => {
       };
       return userB.id - userA.id;
     });
-    setCurrentItems(usersCopy);
+    setCurrentItems(usersCopy.slice(0, 10));
   };
 
   // Sorts the users array by full name (first and last name) in ascending or descending order, depending on the state of sorted.reversed.
@@ -65,21 +76,15 @@ const SimSwop = () => {
     }
     setSearchPhrase(event.target.value)
   };
-  const [currentItems, setCurrentItems] = useState([]);
-  const [pageCount, setPageCount] = useState(1);
-  const [itemOffset, setItemOffset] = useState(0);
-  const [selectedPage, setSelectedPage] = useState(0);
-  const itemsPerPage = 10;
-
+  
   useEffect(() => {
-    if (!data) {
+    if (!users) {
       return;
     }
-
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(data.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(data.length / itemsPerPage));
-  }, [itemOffset]);
+  }, [users, itemOffset, itemsPerPage]);
 
   const handlePageClick = ({ selected }) => {
     const newOffset = selected * itemsPerPage;
@@ -153,6 +158,8 @@ const SimSwop = () => {
 
 
   return (
+    <>
+    <Header />
     <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
       <h1 className='text-xl mb-5 '>Simswop</h1>
       <div className="flex flex-column justify-center text-center gap-4 pb-5">
@@ -216,7 +223,9 @@ const SimSwop = () => {
           previousLabel={<BiLeftArrowAlt className="text-lg" />}
         />
       </div>
+      <Footer />
     </div>
+    </>
   )
 }
 

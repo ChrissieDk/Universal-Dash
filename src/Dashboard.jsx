@@ -1,10 +1,12 @@
 import React from 'react'
 import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
-import { data } from './users'
+import { data } from './users';
+import Footer from './components/Footer';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import ReactPaginate from 'react-paginate';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import Header from './components/Header';
 
 
 const Dashboard = () => {
@@ -132,6 +134,7 @@ const Dashboard = () => {
               <td className='min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.date}</td>
               <td className='min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.package}</td>
               <td className='min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.package_term}</td>
+              <td className='min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.remaining_term}</td>
               <td className='min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.cell_number}</td>
               <td className='min-w-100 p-3 text-sm text-gray-700 whitespace-nowrap'>{user.sim_number}</td>
             </tr>
@@ -152,6 +155,8 @@ const Dashboard = () => {
 
 
   return (
+    <>
+    <Header />
     <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center '>
       <h1 className='text-xl mb-5'>Dashboard</h1>
       <div>
@@ -177,6 +182,7 @@ const Dashboard = () => {
                 <th className='p-3 text-sm font-semibold tracking-wide text-left'>Date</th>
                 <th className='p-3 text-sm font-semibold tracking-wide text-left'>Package</th>
                 <th className='p-3 text-sm font-semibold tracking-wide text-left'>Package term</th>
+                <th className='p-3 text-sm font-semibold tracking-wide text-left'>Remaining term</th>
                 <th className='p-3 text-sm font-semibold tracking-wide text-left'>Cell number</th>
                 <th className='p-3 text-sm font-semibold tracking-wide text-left'>Sim number</th>
               </tr>
@@ -202,7 +208,9 @@ const Dashboard = () => {
           previousLabel={<BiLeftArrowAlt className="text-lg" />}
         />
       </div>
+      <Footer />
     </div>
+    </>
   )
 }
 

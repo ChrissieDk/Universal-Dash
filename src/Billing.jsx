@@ -1,10 +1,12 @@
 import React from 'react'
 import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
-import { data } from './users'
+import { data } from './users';
+import Footer from './components/Footer';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import ReactPaginate from 'react-paginate';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import Header from './components/Header';
 
 
 const Billing = () => {
@@ -35,7 +37,7 @@ const Billing = () => {
       };
       return userB.id - userA.id;
     });
-    setCurrentItems(usersCopy);
+    setCurrentItems(usersCopy.slice(0, 10));
   };
 
   // Sorts the users array by full name (first and last name) in ascending or descending order, depending on the state of sorted.reversed.
@@ -159,6 +161,9 @@ const Billing = () => {
 
 
   return (
+    <>
+    <Header />
+  
     <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
       <h1 className='text-xl mb-5'>Billing</h1>
       <div className="flex flex-column justify-center text-center gap-4 pb-5">
@@ -229,7 +234,9 @@ const Billing = () => {
           previousLabel={<BiLeftArrowAlt className="text-lg" />}
         />
       </div>
+      <Footer />
     </div>
+    </>
   )
 }
 

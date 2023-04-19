@@ -12,7 +12,6 @@ import ForgotPassword from './forgotPassword';
 import MyAccount from './myAccount';
 
 const App = () => {
-//  let location = useLocation()
 
   return (
     <BrowserRouter>
