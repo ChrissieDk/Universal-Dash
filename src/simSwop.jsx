@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import ReactPaginate from 'react-paginate';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
-import Header from './components/Header';
+
 
 
 const SimSwop = () => {
@@ -152,8 +152,8 @@ const SimSwop = () => {
 
   return (
     <>
-      <Header />
-      <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center'>
+      
+      <div className='w-full lg:px-32 fixed justify-center items-center px-6'>
         <h1 className='text-xl mb-5 '>Simswop</h1>
         <div>
           <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full'

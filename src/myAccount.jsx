@@ -14,15 +14,14 @@ import { BsBullseye } from 'react-icons/bs';
 
 const myAccount = () => {
     return (
-
         <>
             <div className="w-full h-full ">
                 <div className=" text-white py-4 pr-64"></div>
-                <h1 className=" flex text-xl mr-52 mt-5 justify-center items-center">My Account</h1>
+                <h1 className="  flex text-xl mr-52 mt-5 justify-center items-center">My Account</h1>
             </div>
-            <div className="fixed flex justify-center items-center h-full w-[90%] ml-20">
-                <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-1 h-[75%] w-[60%] overflow-y-scroll" style={{ 'overflowY': 'scroll' }}>
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md" style={{ width: '92%', height: '90%' }}>
+            <div className="fixed flex justify-center items-center h-full w-full px-6 lg:px-32 overflow-y-auto">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-3 sm:gap-1 h-[75%] lg:w-[60%]  px-2" >
+                    <div className=" bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ height: '90%' }}>
                         <div className='flex items-end'>
                             <FaUserCircle className='my-2 mx-2' />
                             <h2 className='lg:text-2xl'>Active users</h2>
@@ -32,7 +31,7 @@ const myAccount = () => {
                             2000
                         </div>
                     </div>
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md" style={{ width: '92%', height: '90%' }}>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md" style={{ height: '90%' }}>
                         <div className='flex items-center'>
                             <AiOutlinePauseCircle className='my-2 mx-2' />
                             <h2 className='lg:text-2xl'>Users on hold</h2>
@@ -42,7 +41,7 @@ const myAccount = () => {
                             2000
                         </div>
                     </div>
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ width: '92%', height: '90%' }}>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ height: '90%' }}>
                         <div className='flex items-center'>
                             <FiPackage className='my-2 mx-2' />
                             <h2 className='lg:text-2xl'>Total packages</h2>
@@ -52,7 +51,7 @@ const myAccount = () => {
                         </div>
                     </div>
 
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ width: '92%', height: '90%' }}>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ height: '90%' }}>
                         <div className='flex items-center'>
                             <TbPackage className='my-2 mx-2' />
                             <h2 className='lg:text-2xl'>Users on 10/10</h2>
@@ -61,7 +60,7 @@ const myAccount = () => {
                             2000
                         </div>
                     </div>
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ width: '92%', height: '90%' }}>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ height: '90%' }}>
                         <div className='flex items-center'>
                             <GoPackage className='my-2 mx-2' />
                             <h2 className='lg:text-2xl'>Users on 20/20</h2>
@@ -71,7 +70,7 @@ const myAccount = () => {
                         </div>
 
                     </div>
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ width: '92%', height: '90%' }}>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ height: '90%' }}>
                         <div className='flex items-center'>
                             <FcSalesPerformance className='my-2 mx-2' />
                             <h2 className='lg:text-2xl'>Total sales</h2>
@@ -81,7 +80,7 @@ const myAccount = () => {
                             2000
                         </div>
                     </div>
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ width: '92%', height: '90%' }}>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ height: '90%' }}>
                         <div className='flex items-center'>
                             <GrCompliance className='my-2 mx-2' />
                             <h2 className='lg:text-2xl'>Total</h2>
@@ -91,7 +90,7 @@ const myAccount = () => {
                             2000
                         </div>
                     </div>
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md" style={{ width: '92%', height: '90%' }}>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md" style={{ height: '90%' }}>
                         <div className='flex items-center'>
                             <BsBank className='my-2 mx-2' />
                             <h2 className='lg:text-2xl'>Active users</h2>
@@ -101,7 +100,7 @@ const myAccount = () => {
                             2000
                         </div>
                     </div>
-                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ width: '92%', height: '90%' }}>
+                    <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md " style={{ height: '90%' }}>
                         <div className='flex items-center'>
                             <BsBullseye className='my-2 mx-2' />
                             <h2 className='lg:text-2xl'>Active users</h2>

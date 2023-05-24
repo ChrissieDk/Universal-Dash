@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
 import ReactPaginate from 'react-paginate';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
-import Header from './components/Header';
+
 
 
 const Dashboard = () => {
@@ -153,12 +153,13 @@ const Dashboard = () => {
     return <FaArrowDown className='inline-block pl-2 rounded text-lg cursor-pointer' />;
   };
 
+  // add to first div below to enable scroll later style={{ height: 'calc(100vh - 4rem)', overflowY: 'scroll' }}
 
   return (
     <>
-    <Header />
-    <div className='w-full pr-[5rem] pl-[10.5rem] fixed justify-center items-center '>
-      <h1 className='text-xl mb-5'>Dashboard</h1>
+    
+    <div className='w-full lg:px-32 fixed justify-center items-center px-6 my-2 overflow-y-auto' style={{ maxHeight: 'calc(100vh - 6rem)' }} >
+      <h1 className='text-xl mb-5 overflow-y-auto'>Dashboard</h1>
       <div>
         <input className='mb-5 pl-5 p-2 rounded border border-slate-200 w-full sm:mb-5'
           type='text'
@@ -168,8 +169,8 @@ const Dashboard = () => {
         />
       </div>
       <div className='w-full border border-slate-100 rounded-lg '>
-        <div className='overflow-auto rounded-lg shadow sm:min-h-fit'>
-          <table className='w-full pt-10 max-w-screen-sm sm:max-w-none'>
+        <div className='overflow-auto rounded-lg shadow sm:min-h-fit '>
+          <table className='w-full pt-10  '>
             <thead className='bg-slate-50 border-b-2 border-slate-200'>
               <tr>
                 <th onClick={sortById} className='p-3 text-sm font-semibold tracking-wide text-left'>ID

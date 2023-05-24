@@ -29,7 +29,7 @@ const UserIdClick = () => {
             <div className="w-full h-full fixed pt-11 ">
                 <div className="text-lg flex flex-col justify-center items-center">{`${data[0].first_name} ${data[0].last_name}`}</div>
             </div>
-            <div className="fixed flex justify-center items-center h-full w-[90%] ml-20">
+            <div className="fixed flex justify-center items-center h-full w-full px-6 lg:px-32">
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 h-[75%] w-[80%] overflow-y-scroll" style={{ 'overflowY': 'scroll' }}>
                     <div className="relative bg-white p-4 rounded-lg border border-rounded border-gray-300 shadow-md">

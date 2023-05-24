@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="w-full h-screen bg-white object-cover flex items-center border-b-4">
+      <div className="w-full h-screen bg-white object-cover flex items-center border-b-4 overflow-y-auto">
        
        <Sidebar />
       

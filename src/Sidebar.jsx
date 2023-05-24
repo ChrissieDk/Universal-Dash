@@ -2,33 +2,22 @@ import React from 'react';
 import { useState } from 'react';
 import { BiChevronLeft } from "react-icons/bi"
 import SidebarIcons from './components/SidebarIcons';
-import UserProfile from "./components/UserProfile"
+
 import { useLocation } from 'react-router-dom';
-import { BiMenuAltLeft } from "react-icons/bi"
+
 
 const Sidebar = () => {
   const [toggle, setToggle] = useState(true)
   const location = useLocation()
   const isLoginPage = location.pathname === '/Login';
-  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
+ 
 
-  const toggleBurgerMenu = () => {
-    
-    setIsBurgerMenuOpen(!isBurgerMenuOpen);
-    console.log("Burger menu open:", isBurgerMenuOpen);
-  };
+  
 
 
   return (
     <>
-    <button
-        className="lg:hidden"
-        onClick={toggleBurgerMenu}
-      >
-        <BiMenuAltLeft 
-        className='text-5xl font-thin fixed top-0 my-3 mx-3 border rounded-xl border-slate-300'/>
-      </button>
-
+    
       <div className={`hidden md:block ${toggle ? "w-[5.8rem]" : ""}
         lg:hidden sidebar-container z-10 bg-slate-50 border border-slate-200
         ${isLoginPage ? 'hidden' : ''}`}
@@ -58,13 +47,7 @@ const Sidebar = () => {
          className={`${
           toggle ? "rotate-180" : ""} text-3xl transition-all duration-300`} />
       </div>
-      <div className={`lg:hidden z-50 ${isBurgerMenuOpen ? 'SidebarIcons' : 'hidden'}`}>
-        {/* burger menu content */}
-        <div className='absolute top-11 my-4 mx-10 h-[93%] border rounded-lg bg-slate-50'>
-        <SidebarIcons toggle={toggle} />
-        <UserProfile />
-        </div>
-      </div>
+      
     </div>
     </>
   )
